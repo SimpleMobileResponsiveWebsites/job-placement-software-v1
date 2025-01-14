@@ -81,7 +81,7 @@ with st.form(key="placement_form"):
         ["Internship", "Part-Time", "Full-Time", "Project-Based"]
     )
 
-    # CareerForce Parent Services
+    # CareerForce Parent Services (Selection)
     parent_selection = st.multiselect(
         "Select CareerForce Services of Interest:",
         list(careerforce_services.keys())
@@ -89,11 +89,11 @@ with st.form(key="placement_form"):
 
     selected_services = {}
 
-    # Dynamically show sub-options when user selects a service
+    # Show sub-options immediately when user selects a CareerForce Service
     if parent_selection:
         st.subheader("Select Specific Sub-Options for Chosen Services:")
 
-        # Show sub-options only for the selected services
+        # Loop through selected parent services to show sub-options dynamically
         for parent in parent_selection:
             with st.expander(f"Select sub-options for {parent}"):
                 sub_options = st.multiselect(
