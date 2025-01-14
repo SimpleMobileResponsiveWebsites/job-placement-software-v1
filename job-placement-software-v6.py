@@ -87,8 +87,9 @@ with st.form(key="placement_form"):
         list(careerforce_services.keys())
     )
 
-    # CareerForce Sub-Options
     selected_services = {}
+
+    # Loop through selected parent services to display sub-options dynamically
     if parent_selection:
         st.subheader("Select Specific Sub-Options for Chosen Services:")
         for parent in parent_selection:
