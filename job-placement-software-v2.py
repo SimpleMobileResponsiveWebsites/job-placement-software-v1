@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 
 # Title and description
-st.title("Workplace Placement Application")
+st.title("Workplace Placement Application Use For Reverse Engineering and Fast Prototyping for design of Workplace Job Placement")
 st.markdown("Welcome to the Workplace Placement Application. Please fill in the form below to apply for your desired placement.")
 st.markdown("\n**CareerForce Overview**\n\nCareerForce is the State of Minnesota's official resource for career exploration and job search assistance. It offers a variety of services aimed at helping individuals find meaningful employment and develop their careers.\n\n**Services Provided:**\n- **Job Search Assistance:** One-on-one guidance, access to job listings, and employer connections.\n- **Career Counseling:** Personalized advice for youth (14-24) and others to achieve work or education goals.\n- **Training Programs:** Free career training, technical skill development, and workshops on job search strategies.\n- **Networking Opportunities:** Career fairs, events, and professional networking sessions.\n- **Specialized Programs:** Support for dislocated workers, veterans, and individuals with employment barriers.\n- **Support Services:** Assistance with childcare, housing, transportation, and access to labor market information.\n- **Virtual and In-Person Services:** Accessible both online and at various locations across Minnesota.\n\nCareerForce empowers individuals with the tools and support to secure long-term, family-sustaining wages through effective job placement and career development strategies.")
 
