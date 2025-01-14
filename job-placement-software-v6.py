@@ -89,17 +89,19 @@ with st.form(key="placement_form"):
 
     selected_services = {}
 
-    # Show sub-options dynamically based on selected services
+    # Dynamically show sub-options when user selects a service
     if parent_selection:
         st.subheader("Select Specific Sub-Options for Chosen Services:")
+
+        # Show sub-options only for the selected services
         for parent in parent_selection:
-            st.markdown(f"### Select sub-options for {parent}:")
-            sub_options = st.multiselect(
-                f"Sub-options for {parent}",
-                careerforce_services[parent],
-                key=f"sub_options_{parent}"  # Unique key for each sub-option selector
-            )
-            selected_services[parent] = sub_options
+            with st.expander(f"Select sub-options for {parent}"):
+                sub_options = st.multiselect(
+                    f"Sub-options for {parent}",
+                    careerforce_services[parent],
+                    key=f"sub_options_{parent}"  # Unique key for each sub-option selector
+                )
+                selected_services[parent] = sub_options
 
     # Availability
     start_date = st.date_input("Start Date", min_value=datetime.date.today())
