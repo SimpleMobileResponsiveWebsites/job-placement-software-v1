@@ -89,7 +89,7 @@ with st.form(key="placement_form"):
 
     selected_services = {}
 
-    # Loop through selected parent services to display sub-options dynamically
+    # Show sub-options dynamically based on selected services
     if parent_selection:
         st.subheader("Select Specific Sub-Options for Chosen Services:")
         for parent in parent_selection:
